@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/Coba', function () {
     return view('Latihan');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
